@@ -11,9 +11,3 @@ env:
 script:
 - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
 - docker build -t terraform-aws-cli -t $REPO:$TAG -f Dockerfile .
-
-after_success:
-- docker login -u $DOCKER_USER -p $DOCKER_PASS
-- docker tag $REPO:$COMMIT $REPO:$TAG
-- docker tag $REPO:$COMMIT $REPO:$TRAVIS_BUILD_NUMBER
-- docker push $REPO
