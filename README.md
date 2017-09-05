@@ -6,8 +6,8 @@ This repository automatically builds containers for using terraform and AWS comm
 
 You can use this image with the following:
 
-`docker run --rm -it georgema/terraform-awscli terraform <command>`  
+`docker run --rm -it georgema/terraform-awscli 'terraform <command>'`  
 or  
-`docker run --rm -it georgema/terraform-awscli aws <command>`
+`docker run --rm -it georgema/terraform-awscli 'aws <command>'`
 
 Should you have any questions or suggestions, please open an issue on github.  
