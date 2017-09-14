@@ -1,6 +1,6 @@
 FROM hashicorp/terraform:light
 
-RUN apk add --update python py-pip openssl ca-certificates groff && \
+RUN apk add --update python py-pip openssl ca-certificates groff zip && \
     pip install --upgrade pip awscli && \
 ################
 # To set up timezone, uncomment the following lines
